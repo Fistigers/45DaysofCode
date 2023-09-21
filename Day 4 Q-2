@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++)
+	{
+	    
+	    int l,v1,v2;
+	    cin>>l>>v1>>v2;
+	    
+	    int s_t=(l+v1-1)/v1;
+	    int s_h=(l+v2-1)/v2;
+	    if (s_t==s_h)
+	    {
+	        cout<<"-1"<<endl;
+	    }
+	    else
+	    {
+	        cout<<(s_t-s_h)-1<<endl;
+	    }
+	}
+	return 0;
+}
