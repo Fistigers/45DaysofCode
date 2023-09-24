@@ -1,0 +1,53 @@
+//////////////////CODE 1////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++)
+	{
+	    int x,y;
+	    cin>>x>>y;
+	    
+	    if( x > y*10)
+	    {
+	        cout<<"YES"<<endl;
+	    }
+	    else
+	    {
+	        cout<<"NO"<<endl;
+	    }
+	}
+	return 0;
+}
+
+
+//////////////////CODE 2//////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++)
+	{
+	    int Pa,Pb,Pc;
+	    cin>>Pa>>Pb>>Pc;
+	    
+	    if(Pa+Pc > Pb)
+	    {
+	        cout<<Pa+Pc<<endl;
+	    }
+	    else
+	    {
+	        cout<<Pb<<endl;
+	    }
+	    
+	 }
+	return 0;
+}
