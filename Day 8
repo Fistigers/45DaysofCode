@@ -1,0 +1,77 @@
+///////////////////////CODE 1 ///////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++)
+	{
+	   int x,y;
+	   cin>>x>>y;
+	   
+	   int bucket_water = 2*y;
+	   
+	   if(x >=bucket_water)
+	   {
+	       cout<<x/bucket_water<<endl;
+	   }
+	   else
+	   {
+	       cout<<0<<endl;
+	   }
+	}
+	return 0;
+}
+
+
+/////////////////////////////CODE 2 ////////////////////////
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int findLargestScreen(int N, int B, vector<vector<int>>& tablets) {
+    int maxArea = -1;
+    for (int i = 0; i < N; i++) {
+        if (tablets[i][2] <= B) {
+            int area = tablets[i][0] * tablets[i][1];
+            if (area > maxArea) {
+                maxArea = area;
+            }
+        }
+    }
+    return maxArea;
+}
+
+int main() {
+    int t;
+    cin>>t;
+    
+    for(int i=1;i<=t;i++)
+    {
+    
+    int N, B;
+    cin >> N >> B;
+    
+    vector<vector<int>> tablets(N, vector<int>(3));
+    for (int i = 0; i < N; i++) {
+        cin >> tablets[i][0] >> tablets[i][1] >> tablets[i][2];
+    }
+
+int largestScreenArea = findLargestScreen(N, B, tablets);
+    
+    if (largestScreenArea == -1) {
+        cout  <<"no tablet"<<endl;
+    } else {
+        cout << largestScreenArea << endl;
+    }
+    }
+    return 0;
+}
+
+
+
+
+
