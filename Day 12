@@ -1,0 +1,73 @@
+//////////////////////// CODE 1 ////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t ;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	    int x,y,z;
+	    cin>>x>>y>>z;
+	    
+	    int reach_bullet = y/x;
+	    
+	    if(reach_bullet<z){
+	    cout<<z-reach_bullet<<endl;
+	    }
+	    else{
+	        cout<<0<<endl;
+	    }
+	}
+	return 0;
+}
+
+
+//////////////////////////////////CODE 2 ///////////////////////
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    
+    for(int i=1;i<=t;i++){
+    
+    int A, B;
+    cin >> A >> B;
+
+    int limak = 0;
+    int bob = 0;
+    int turn = 1;  
+
+    for (int i = 1; ; i++) {
+        if (turn) {
+            if (i % 2 == 1) {
+                if (limak + i <= A) {
+                    limak += i;
+                } else {
+                    cout << "Bob" << endl;
+                    break;
+                }
+            }
+        } else {
+            if (i % 2 == 0) {
+                if (bob + i <= B) {
+                    bob += i;
+                } else {
+                    cout << "Limak" << endl;
+                    break;
+                }
+            }
+        }
+
+        turn = 1 - turn;
+    }
+    }
+
+    return 0;
+}
+
