@@ -1,0 +1,55 @@
+////////////////////////// CODE 1 //////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	    int A,B,X,Y;
+	    cin>>A>>B>>X>>Y;
+	    
+	    int capability = A*B;
+	    int units_of_power = X*Y;
+	    
+	    if(capability <= units_of_power){
+	        cout<<"YES"<<endl;
+	    }
+	    else{
+	        cout<<"NO"<<endl;
+	    }
+
+
+/////////////////// CODE 2//////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	
+	
+	int N;
+    cin >> N;
+
+  
+        
+    int evenCount = N / 2; 
+    int oddCount = N - evenCount; 
+    
+      for(int i=1;i<=N;i++){
+
+    int pairCount = evenCount * oddCount; 
+
+    cout  << pairCount <<endl;
+
+	}
+	}   
+	return 0;
+}
