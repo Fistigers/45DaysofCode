@@ -1,0 +1,80 @@
+/////////////////////////////// CODE 1 //////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	    int x,y;
+	    cin>>x>>y;
+	    
+
+	    int steps = x/y +  x%y;
+	    cout<<steps<<endl;
+	}
+	return 0;
+}
+
+
+////////////////////////////// CODE 2 /////////////////////////
+#include <iostream>
+using namespace std;
+
+bool checkStatements(int x, int y, int z) {
+    int a, b, c;
+    
+    
+    a = x + b;
+    b = y + c;
+    c = z + a;
+    
+    if (a == (x + b) && b == (y + c) && c == (z + a)) {
+        return true;
+    }
+    
+    return false;
+}
+
+int main() {
+    
+    int t;
+    cin>>t;
+    
+    for(int i=1;i<=t;i++){
+        
+    
+    int x, y, z;
+    cin >> x >> y >> z;
+    
+
+    bool statementsHoldTrue = false;
+    for (int i = -x; i <= x; i++) {
+        for (int j = -y; j <= y; j++) {
+            for (int k = -z; k <= z; k++) {
+                if (checkStatements(i, j, k)) {
+                    statementsHoldTrue = true;
+                    break;
+                }
+            }
+            if (statementsHoldTrue) {
+                break;
+            }
+        }
+        if (statementsHoldTrue) {
+            break;
+        }
+    }
+    
+ 
+    if (statementsHoldTrue) {
+        cout <<"YES" << endl;
+    } else {
+        cout << "NO"<<endl;
+    }
+    }
+    return 0;
+}
