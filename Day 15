@@ -1,0 +1,59 @@
+/////////////////////// CODE 1 /////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	    
+	   int N, X;
+        cin>>N>>X;
+   
+
+    int operations;
+    if (X >= N/2) {
+        operations = N - X;
+    } else {
+        operations = X;
+    }
+
+    cout <<  operations << std::endl;
+	}
+	return 0;
+}
+
+
+
+/////////////////////////////////// CODE 2 //////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+		int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	    int N;
+        cin >> N;
+
+    int max_height = 0;
+    for (int i = 0; i < N; i++) {
+        int height;
+        cout <<  (i+1);
+        cin >> height;
+
+        if (height > max_height) {
+            max_height = height;
+        }
+    }
+
+     cout <<  max_height << std::endl;
+	}
+	return 0;
+}
