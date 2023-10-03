@@ -1,0 +1,52 @@
+////////////// CODE 1////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	    int N,M;
+	    cin>>N>>M;
+	    
+	  
+	   
+	   if( N%M ==0 && M%2 == 0){
+	       cout<<"YES"<<endl;
+	   }
+	   else{
+	       cout<<"NO"<<endl;
+	   }
+	   
+	}
+	return 0;
+}
+
+
+
+/////////////////////// CODE 2 ////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++){
+	    
+	int N;
+	cin>>N;
+	  
+	  int jar1 = 1;
+	  int jar2 =N-2;
+	  int jar3 = 1;
+	  
+	  cout << jar1 << jar2 << jar3 << endl;
+	}
+	return 0;
+}
+
