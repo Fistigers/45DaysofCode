@@ -1,0 +1,70 @@
+/////////////// CODE 1 ////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int t;
+    cin>>t;
+    
+    for(int i=1;i<=t;i++){
+        
+        int A,B,C,X;
+        cin >> A;
+        cin >> B;
+        cin >> C;
+         cin >> X;
+
+    // Check if any two can contribute
+    if ((A +B >= X) || (A + C >= X) || (B +C >= X)) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
+    }
+	return 0;
+}
+
+
+//////////////////////// CODE 2 /////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+    cin>>t;
+    
+    for(int j=1;j<=t;j++){
+        
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        int solved_problems;
+        cin >> solved_problems;
+
+        string level;
+        if (solved_problems == 0) {
+            level = "beginner";
+        } else if (solved_problems == 1) {
+            level = "junior developer";
+        } else if (solved_problems == 2) {
+            level = "middle developer";
+        } else if (solved_problems == 3) {
+            level = "senior developer";
+        } else if (solved_problems == 4) {
+            level = "hacker";
+        } else if (solved_problems == 5) {
+            level = "Jeff Dean";
+        } else {
+            level = "invalid";
+        }
+
+        cout <<level<<endl;
+    }
+    }
+	return 0;
+}
+
+
