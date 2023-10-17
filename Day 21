@@ -1,0 +1,74 @@
+//////////////////// CODE 1 /////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+    cin>>t;
+    
+    for(int j=1;j<=t;j++){
+        
+    int X, Y, C;
+    cin >> C;
+    cin >> X;
+    cin >> Y;
+
+    int required_money = (C - X) * Y;
+    
+    if (required_money < 0) {
+        required_money = 0; // Chef already has enough chocolates
+    }
+
+    cout <<  required_money << endl;
+
+    }
+
+	return 0;
+}
+
+
+///////////////////////// CODE 2 ///////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+    cin>>t;
+    
+    for(int j=1;j<=t;j++){
+        
+    int main() {
+    int Y;
+    int dp[MAX_X] = {0};
+    cin >> Y;
+
+    
+    dp[0] = 1;
+
+    for (int y = 1; y <= Y; ++y) {
+        for (int x = 0; x < MAX_X; ++x) {
+            if (x >= 2) {
+                dp[x] += dp[x - 2];
+            }
+            if (x >= 1) {
+                dp[x] += dp[x - 1];
+            }
+        }
+    }
+
+    
+    int distinct_values = 0;
+    for (int x = 0; x < MAX_X; ++x) {
+        if (dp[x] > 0) {
+            distinct_values++;
+        }
+    }
+
+    cout <<  Y <<  distinct_values << endl;
+
+}
+	return 0;
+}
+
